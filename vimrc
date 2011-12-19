@@ -1,12 +1,19 @@
 set nocompatible
 set encoding=utf-8
 set fileencoding=utf-8
-let mapleader = ","
+let mapleader=","
 
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
-syntax on
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+
+set background=dark
+colorscheme solarized
+
 filetype on
 filetype plugin on
 filetype indent on
