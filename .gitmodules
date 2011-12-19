@@ -88,3 +88,6 @@
 [submodule "bundle/LustyJuggler"]
 	path = bundle/LustyJuggler
 	url = https://github.com/mutewinter/LustyJuggler.git
+[submodule "bundle/ZoomWin"]
+	path = bundle/ZoomWin
+	url = https://github.com/vim-scripts/ZoomWin.git
