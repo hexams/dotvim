@@ -81,3 +81,7 @@ if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC
 endif
 nmap <leader>v :tabedit $MYVIMRC<CR>
+
+let g:statusline_fugitive = 1
+let g:statusline_rvm = 0
+let g:statusline_syntastic = 0
