@@ -64,3 +64,6 @@
 [submodule "bundle/status"]
 	path = bundle/status
 	url = https://github.com/dickeytk/status.vim.git
+[submodule "bundle/colorv"]
+	path = bundle/colorv
+	url = https://github.com/Rykka/ColorV.git
