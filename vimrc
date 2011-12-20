@@ -7,7 +7,7 @@ runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 if &t_Co > 2 || has("gui_running")
-  syntax on
+  syntax enable
   set hlsearch
   nmap <silent> <leader>h :silent :nohlsearch<CR>
 endif
@@ -40,6 +40,7 @@ set sidescroll=5
 set scrolloff=5
 set formatprg=par\ -TbgqRw80
 
+set cindent
 set autoindent
 set smartindent
 
@@ -47,13 +48,21 @@ set ignorecase
 set smartcase
 set incsearch
 
+set showmatch
+set matchtime=2
+
 set ruler
 set number
 set relativenumber
 
+set mousehide
+set mouse=a
+
+set autoread
 set wildmenu
 set wildmode=list:longest
 set shortmess=atI
+set timeoutlen=500
 
 set visualbell
 set hidden
@@ -76,6 +85,8 @@ map <leader>ee :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabedit %%
+map <leader>ea :b#<CR>
+
 
 if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC
@@ -85,3 +96,15 @@ nmap <leader>v :tabedit $MYVIMRC<CR>
 let g:statusline_fugitive = 1
 let g:statusline_rvm = 0
 let g:statusline_syntastic = 0
+let g:statusline_fullpath = 0
+
+let g:fuf_modesDisable=['mrucmd']
+nnoremap <leader>ff :FufFile<CR>
+nnoremap <leader>fm :FufMruFile<CR>
+nnoremap <leader>fb :FufBuffer<CR>
+
+let g:indent_guides_auto_colors = 1
+let g:indent_guides_enable_on_vim_startup = 0
+let g:indent_guides_color_change_percent = 3
+let g:indent_guides_guide_size = 0
+noremap <leader>i :IndentGuidesToggle<CR>
