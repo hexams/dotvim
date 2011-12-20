@@ -85,9 +85,6 @@
 [submodule "bundle/coffee-script"]
 	path = bundle/coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/LustyJuggler"]
-	path = bundle/LustyJuggler
-	url = https://github.com/mutewinter/LustyJuggler.git
 [submodule "bundle/ZoomWin"]
 	path = bundle/ZoomWin
 	url = https://github.com/vim-scripts/ZoomWin.git
