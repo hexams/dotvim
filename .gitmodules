@@ -136,3 +136,15 @@
 [submodule "bundle/ap_vim-css-color"]
 	path = bundle/ap_vim-css-color
 	url = https://github.com/ap/vim-css-color.git
+[submodule "bundle/garbas_vim-snipmate"]
+	path = bundle/garbas_vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "bundle/tomtom_tlib_vim"]
+	path = bundle/tomtom_tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "bundle/MarcWeber_vim-addon-mw-utils"]
+	path = bundle/MarcWeber_vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/honza_snipmate-snippets"]
+	path = bundle/honza_snipmate-snippets
+	url = https://github.com/honza/snipmate-snippets.git
