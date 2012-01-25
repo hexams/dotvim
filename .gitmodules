@@ -100,3 +100,6 @@
 [submodule "bundle/nono_vim-handlebars"]
 	path = bundle/nono_vim-handlebars
 	url = git://github.com/nono/vim-handlebars.git
+[submodule "bundle/timcharper_textile.vim"]
+	path = bundle/timcharper_textile.vim
+	url = https://github.com/timcharper/textile.vim.git
