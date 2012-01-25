@@ -124,3 +124,6 @@
 [submodule "bundle/jbking_vim-pep8"]
 	path = bundle/jbking_vim-pep8
 	url = https://github.com/jbking/vim-pep8.git
+[submodule "bundle/michaeljsmith_vim-indent-object"]
+	path = bundle/michaeljsmith_vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object.git
