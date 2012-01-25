@@ -97,3 +97,6 @@
 [submodule "bundle/jeetsukumaran_vim-buffergator"]
 	path = bundle/jeetsukumaran_vim-buffergator
 	url = https://github.com/jeetsukumaran/vim-buffergator.git
+[submodule "bundle/nono_vim-handlebars"]
+	path = bundle/nono_vim-handlebars
+	url = git://github.com/nono/vim-handlebars.git
