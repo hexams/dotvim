@@ -103,3 +103,6 @@
 [submodule "bundle/timcharper_textile.vim"]
 	path = bundle/timcharper_textile.vim
 	url = https://github.com/timcharper/textile.vim.git
+[submodule "bundle/skwp_vim-rspec"]
+	path = bundle/skwp_vim-rspec
+	url = https://github.com/skwp/vim-rspec.git
