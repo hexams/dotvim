@@ -94,3 +94,6 @@
 [submodule "bundle/majutsushi_tagbar"]
 	path = bundle/majutsushi_tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "bundle/jeetsukumaran_vim-buffergator"]
+	path = bundle/jeetsukumaran_vim-buffergator
+	url = https://github.com/jeetsukumaran/vim-buffergator.git
