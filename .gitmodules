@@ -91,3 +91,6 @@
 [submodule "bundle/Rip-Rip_clang_complete"]
 	path = bundle/Rip-Rip_clang_complete
 	url = https://github.com/Rip-Rip/clang_complete.git
+[submodule "bundle/kien_ctrlp.vim"]
+	path = bundle/kien_ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
