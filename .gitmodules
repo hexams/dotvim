@@ -115,3 +115,6 @@
 [submodule "bundle/mmalecki_vim-node.js"]
 	path = bundle/mmalecki_vim-node.js
 	url = https://github.com/mmalecki/vim-node.js.git
+[submodule "bundle/edsono_vim-matchit"]
+	path = bundle/edsono_vim-matchit
+	url = https://github.com/edsono/vim-matchit.git
