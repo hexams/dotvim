@@ -91,3 +91,6 @@
 [submodule "bundle/ervandew_supertab"]
 	path = bundle/ervandew_supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/majutsushi_tagbar"]
+	path = bundle/majutsushi_tagbar
+	url = https://github.com/majutsushi/tagbar.git
