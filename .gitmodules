@@ -127,3 +127,6 @@
 [submodule "bundle/michaeljsmith_vim-indent-object"]
 	path = bundle/michaeljsmith_vim-indent-object
 	url = https://github.com/michaeljsmith/vim-indent-object.git
+[submodule "bundle/vim-scripts_Rename2"]
+	path = bundle/vim-scripts_Rename2
+	url = https://github.com/vim-scripts/Rename2.git
