@@ -88,3 +88,6 @@
 [submodule "bundle/kien_ctrlp.vim"]
 	path = bundle/kien_ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "bundle/ervandew_supertab"]
+	path = bundle/ervandew_supertab
+	url = https://github.com/ervandew/supertab.git
