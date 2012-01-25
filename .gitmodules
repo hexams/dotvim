@@ -112,3 +112,6 @@
 [submodule "bundle/vim-scripts_csv.vim"]
 	path = bundle/vim-scripts_csv.vim
 	url = https://github.com/vim-scripts/csv.vim.git
+[submodule "bundle/mmalecki_vim-node.js"]
+	path = bundle/mmalecki_vim-node.js
+	url = https://github.com/mmalecki/vim-node.js.git
