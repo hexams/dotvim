@@ -133,3 +133,6 @@
 [submodule "bundle/rgarver_Kwbd.vim"]
 	path = bundle/rgarver_Kwbd.vim
 	url = https://github.com/rgarver/Kwbd.vim.git
+[submodule "bundle/ap_vim-css-color"]
+	path = bundle/ap_vim-css-color
+	url = https://github.com/ap/vim-css-color.git
