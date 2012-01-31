@@ -22,10 +22,10 @@ let g:statusline_rvm=0
 let g:statusline_syntastic=0
 let g:statusline_fullpath=0
 
-let g:fuf_modesDisable=['mrucmd']
-nnoremap <leader>ff :FufFile<CR>
-nnoremap <leader>fm :FufMruFile<CR>
-nnoremap <leader>fb :FufBuffer<CR>
+"let g:fuf_modesDisable=['mrucmd']
+"nnoremap <leader>ff :FufFile<CR>
+"nnoremap <leader>fm :FufMruFile<CR>
+"nnoremap <leader>fb :FufBuffer<CR>
 
 let g:indent_guides_auto_colors=1
 let g:indent_guides_enable_on_vim_startup=0
@@ -113,3 +113,14 @@ map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabedit %%
 map <leader>ea :b#<CR>
+
+set completeopt=menu,menuone,longest
+set pumheight=10
+let g:SuperTabDefaultCompletionType="context"
+let g:clang_complete_auto=0
+let g:clang_complete_copen=1
+
+set wildignore+=*/.hg/*,*/.svn/*
+set wildignore+=*.o,moc_*.cpp,*.exe,*.qm
+set wildignore+=.gitkeep,.DS_Store
+let g:ctrlp_custom_ignore='\.git$'
