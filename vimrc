@@ -59,7 +59,7 @@ map <leader>l :set list!<CR>
 
 set nopaste
 set textwidth=80
-set nowrap
+set wrap
 command! -nargs=* Wrap set wrap linebreak nolist
 set linebreak
 set showbreak=…
@@ -78,9 +78,11 @@ set incsearch
 set showmatch
 set matchtime=2
 
+set showmode
+set showcmd
 set ruler
 set number
-set relativenumber
+"set relativenumber
 
 set mousehide
 set mouse=a
@@ -99,6 +101,9 @@ set nospell
 set spelllang=en_us,pt_br
 nmap <silent> <leader>s :set spell!<CR>
 
+set history=1000
+
+set backup
 set backupdir=~/.vim/backup,~/tmp,/var/tmp,/tmp
 set directory=~/.vim/backup,~/tmp,/var/tmp,/tmp
 
@@ -123,4 +128,12 @@ let g:clang_complete_copen=1
 set wildignore+=*/.hg/*,*/.svn/*
 set wildignore+=*.o,moc_*.cpp,*.exe,*.qm
 set wildignore+=.gitkeep,.DS_Store
+
 let g:ctrlp_custom_ignore='\.git$'
+let g:ctrlp_root_markers=['Gemfile', 'Rakefile']
+let g:ctrlp_max_height=20
+
+map <Esc>[A <Up>
+map <Esc>[B <Down>
+map <Esc>[C <Right>
+map <Esc>[D <Left>
