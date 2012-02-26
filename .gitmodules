@@ -61,9 +61,6 @@
 [submodule "bundle/mutewinter_vim-indent-guides"]
 	path = bundle/mutewinter_vim-indent-guides
 	url = https://github.com/mutewinter/vim-indent-guides.git
-[submodule "bundle/dickeytk_status.vim"]
-	path = bundle/dickeytk_status.vim
-	url = https://github.com/dickeytk/status.vim.git
 [submodule "bundle/Rykka_ColorV"]
 	path = bundle/Rykka_ColorV
 	url = https://github.com/Rykka/ColorV.git
