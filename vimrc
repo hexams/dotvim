@@ -69,6 +69,7 @@ set showcmd
 set ruler
 set number
 "set relativenumber
+map <leader>n :exec &nu==1 ? "set relativenumber" : "set number"<CR>
 
 set mousehide
 set mouse=a
@@ -123,3 +124,5 @@ map <Esc>[A <Up>
 map <Esc>[B <Down>
 map <Esc>[C <Right>
 map <Esc>[D <Left>
+
+set colorcolumn=+1
