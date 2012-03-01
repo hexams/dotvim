@@ -126,3 +126,5 @@ map <Esc>[C <Right>
 map <Esc>[D <Left>
 
 set colorcolumn=+1
+
+autocmd CursorHold * checktime
