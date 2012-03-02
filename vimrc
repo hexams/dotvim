@@ -119,6 +119,7 @@ set wildignore+=.gitkeep,.DS_Store
 let g:ctrlp_custom_ignore='\.git$'
 let g:ctrlp_root_markers=['Gemfile', 'Rakefile']
 let g:ctrlp_max_height=20
+nmap <leader>p :CtrlPBuffer<CR>
 
 map <Esc>[A <Up>
 map <Esc>[B <Down>
