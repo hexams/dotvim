@@ -129,3 +129,8 @@ map <Esc>[D <Left>
 set colorcolumn=+1
 
 autocmd CursorHold * checktime
+
+set winwidth=85
+set winheight=5
+set winminheight=5
+set winheight=999
