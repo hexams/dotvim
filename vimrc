@@ -6,8 +6,6 @@ let mapleader=","
 runtime bundle/tpope_vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
-let g:netrw_home="~/.vim/backup"
-
 if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC
 endif
@@ -68,8 +66,7 @@ set showmode
 set showcmd
 set ruler
 set number
-"set relativenumber
-map <leader>n :exec &nu==1 ? "set relativenumber" : "set number"<CR>
+map <silent> <leader>n :exec &nu==1 ? "set relativenumber" : "set number"<CR>
 
 set mousehide
 set mouse=a
@@ -93,11 +90,6 @@ set history=1000
 set backup
 set backupdir=~/.vim/backup,~/tmp,/var/tmp,/tmp
 set directory=~/.vim/backup,~/tmp,/var/tmp,/tmp
-
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
 
 cnoremap %% <C-R>=expand("%:h")."/"<CR>
 map <leader>ee :e %%
