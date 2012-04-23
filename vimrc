@@ -126,3 +126,23 @@ set winwidth=85
 set winheight=5
 set winminheight=5
 set winheight=999
+
+imap jj <esc>
+
+map <Left> :echo "NO!"<cr>
+map <Right> :echo "NO!"<cr>
+map <Up> :echo "NO!"<cr>
+map <Down> :echo "NO!"<cr>
+
+autocmd BufReadPost *
+  \ if line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal g`\"" |
+  \ endif
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+map <C-w>\ :vsp<cr>
+map <C-w>- :sp<cr>
