@@ -146,3 +146,5 @@ nnoremap <C-l> <C-w>l
 
 map <C-w>\ :vsp<cr>
 map <C-w>- :sp<cr>
+
+cnoremap w!! w !sudo tee % > /dev/null
