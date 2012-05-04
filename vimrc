@@ -3,7 +3,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 let mapleader=","
 
-runtime bundle/tpope_vim-pathogen/autoload/pathogen.vim
+runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 if has("autocmd")
