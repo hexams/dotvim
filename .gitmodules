@@ -46,9 +46,6 @@
 [submodule "bundle/altercation_vim-colors-solarized"]
 	path = bundle/altercation_vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/tomtom_tcomment_vim"]
-	path = bundle/tomtom_tcomment_vim
-	url = https://github.com/tomtom/tcomment_vim.git
 [submodule "bundle/vim-ruby_vim-ruby"]
 	path = bundle/vim-ruby_vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
@@ -76,9 +73,6 @@
 [submodule "bundle/vim-scripts_ZoomWin"]
 	path = bundle/vim-scripts_ZoomWin
 	url = https://github.com/vim-scripts/ZoomWin.git
-[submodule "bundle/Rip-Rip_clang_complete"]
-	path = bundle/Rip-Rip_clang_complete
-	url = https://github.com/Rip-Rip/clang_complete.git
 [submodule "bundle/kien_ctrlp.vim"]
 	path = bundle/kien_ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
@@ -94,12 +88,6 @@
 [submodule "bundle/nono_vim-handlebars"]
 	path = bundle/nono_vim-handlebars
 	url = git://github.com/nono/vim-handlebars.git
-[submodule "bundle/timcharper_textile.vim"]
-	path = bundle/timcharper_textile.vim
-	url = https://github.com/timcharper/textile.vim.git
-[submodule "bundle/skwp_vim-rspec"]
-	path = bundle/skwp_vim-rspec
-	url = https://github.com/skwp/vim-rspec.git
 [submodule "bundle/cakebaker_scss-syntax.vim"]
 	path = bundle/cakebaker_scss-syntax.vim
 	url = https://github.com/cakebaker/scss-syntax.vim.git
@@ -109,12 +97,6 @@
 [submodule "bundle/mmalecki_vim-node.js"]
 	path = bundle/mmalecki_vim-node.js
 	url = https://github.com/mmalecki/vim-node.js.git
-[submodule "bundle/edsono_vim-matchit"]
-	path = bundle/edsono_vim-matchit
-	url = https://github.com/edsono/vim-matchit.git
-[submodule "bundle/sjl_gundo.vim"]
-	path = bundle/sjl_gundo.vim
-	url = https://github.com/sjl/gundo.vim.git
 [submodule "bundle/jbking_vim-pep8"]
 	path = bundle/jbking_vim-pep8
 	url = https://github.com/jbking/vim-pep8.git
@@ -124,21 +106,9 @@
 [submodule "bundle/vim-scripts_Rename2"]
 	path = bundle/vim-scripts_Rename2
 	url = https://github.com/vim-scripts/Rename2.git
-[submodule "bundle/rgarver_Kwbd.vim"]
-	path = bundle/rgarver_Kwbd.vim
-	url = https://github.com/rgarver/Kwbd.vim.git
-[submodule "bundle/ap_vim-css-color"]
-	path = bundle/ap_vim-css-color
-	url = https://github.com/ap/vim-css-color.git
 [submodule "bundle/garbas_vim-snipmate"]
 	path = bundle/garbas_vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
-[submodule "bundle/tomtom_tlib_vim"]
-	path = bundle/tomtom_tlib_vim
-	url = https://github.com/tomtom/tlib_vim.git
-[submodule "bundle/MarcWeber_vim-addon-mw-utils"]
-	path = bundle/MarcWeber_vim-addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "bundle/honza_snipmate-snippets"]
 	path = bundle/honza_snipmate-snippets
 	url = https://github.com/honza/snipmate-snippets.git
