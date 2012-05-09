@@ -101,6 +101,7 @@ map <leader>ea :b#<CR>
 set completeopt=menu,menuone,longest
 set pumheight=10
 let g:SuperTabDefaultCompletionType="context"
+let g:SuperTabLongestHighlight="true"
 let g:clang_complete_auto=0
 let g:clang_complete_copen=1
 
