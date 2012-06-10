@@ -130,3 +130,6 @@
 [submodule "bundle/commentary"]
 	path = bundle/commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "bundle/slime"]
+	path = bundle/slime
+	url = git://github.com/jpalardy/vim-slime.git

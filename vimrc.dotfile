@@ -149,3 +149,5 @@ map <C-w>\ :vsp<cr>
 map <C-w>- :sp<cr>
 
 cnoremap w!! w !sudo tee % > /dev/null
+
+let g:slime_target = "tmux"
