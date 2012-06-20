@@ -109,7 +109,7 @@ set wildignore+=*/.hg/*,*/.svn/*
 set wildignore+=*.o,moc_*.cpp,*.exe,*.qm
 set wildignore+=.gitkeep,.DS_Store
 
-let g:ctrlp_custom_ignore='\.git$'
+let g:ctrlp_custom_ignore='\.git$\|build$\|vendor$'
 let g:ctrlp_root_markers=['Gemfile', 'Rakefile']
 let g:ctrlp_max_height=20
 nmap <leader>p :CtrlPBuffer<CR>
