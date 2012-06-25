@@ -151,3 +151,5 @@ map <C-w>- :sp<cr>
 cnoremap w!! w !sudo tee % > /dev/null
 
 let g:slime_target = "tmux"
+
+autocmd FileType cmake set commentstring=#\ %s
