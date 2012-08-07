@@ -139,3 +139,6 @@
 [submodule "bundle/treetop"]
 	path = bundle/treetop
 	url = https://github.com/nanki/treetop.vim.git
+[submodule "bundle/clang_complete"]
+	path = bundle/clang_complete
+	url = https://github.com/Rip-Rip/clang_complete.git
