@@ -154,3 +154,5 @@ let g:slime_target = "tmux"
 let g:clang_use_library = 1
 
 autocmd FileType cmake set commentstring=#\ %s
+
+set tags+=gems.tags
