@@ -118,9 +118,6 @@
 [submodule "bundle/ruby-conque"]
 	path = bundle/ruby-conque
 	url = https://github.com/skwp/vim-ruby-conque.git
-[submodule "bundle/commentary"]
-	path = bundle/commentary
-	url = https://github.com/tpope/vim-commentary.git
 [submodule "bundle/slime"]
 	path = bundle/slime
 	url = git://github.com/jpalardy/vim-slime.git
@@ -133,3 +130,6 @@
 [submodule "bundle/zeh-snippets"]
 	path = bundle/zeh-snippets
 	url = https://github.com/zehrizzatti/snipmate-snippets.git
+[submodule "bundle/tcomment"]
+	path = bundle/tcomment
+	url = https://github.com/tomtom/tcomment_vim.git

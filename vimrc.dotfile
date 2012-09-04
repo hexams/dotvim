@@ -83,7 +83,6 @@ endif
 if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC
   autocmd CursorHold * checktime
-  autocmd FileType cmake set commentstring=#\ %s
   autocmd BufReadPost *
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
         \   exe "normal g`\"" |
@@ -110,8 +109,6 @@ command! -nargs=* Wrap set wrap linebreak nolist
 cnoremap %% <C-R>=expand("%:h")."/"<CR>
 cnoremap w!! w !sudo tee % > /dev/null
 
-imap jj <ESC>
-
 map <Down> :echo "NO!"<CR>
 map <Esc>[A <Up>
 map <Esc>[B <Down>
@@ -120,6 +117,10 @@ map <Esc>[D <Left>
 map <Left> :echo "NO!"<CR>
 map <Right> :echo "NO!"<CR>
 map <Up> :echo "NO!"<CR>
+
+imap jj <ESC>
+nmap \\\ gcc
+vmap \\ gc
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
