@@ -119,6 +119,10 @@ map <Right> :echo "NO!"<CR>
 map <Up> :echo "NO!"<CR>
 
 imap jj <ESC>
+nmap <leader>ee :e %%
+nmap <leader>es :sp %%
+nmap <leader>et :tabedit %%
+nmap <leader>ev :vsp %%
 nmap \\\ gcc
 vmap \\ gc
 
@@ -129,13 +133,8 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-w>- :sp<CR>
 nnoremap <C-w>\ :vsp<CR>
 nnoremap <leader>. :b#<CR>
-nnoremap <leader>ee :e %%
-nnoremap <leader>es :sp %%
-nnoremap <leader>et :tabedit %%
-nnoremap <leader>ev :vsp %%
 nnoremap <leader>h :nohlsearch<CR>
 nnoremap <leader>i :IndentGuidesToggle<CR>
 nnoremap <leader>l :set list!<CR>
-nnoremap <leader>p :CtrlPBuffer<CR>
 nnoremap <leader>s :set spell!<CR>
 nnoremap <leader>v :edit $MYVIMRC<CR>
