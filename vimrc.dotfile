@@ -157,3 +157,7 @@ nnoremap <leader>i :IndentGuidesToggle<CR>
 nnoremap <leader>l :set list!<CR>
 nnoremap <leader>s :set spell!<CR>
 nnoremap <leader>v :edit $MYVIMRC<CR>
+
+if filereadable(expand("./.vimrc"))
+  source ./.vimrc
+endif
