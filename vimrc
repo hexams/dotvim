@@ -75,9 +75,9 @@ set laststatus=2
 " colors
 if &t_Co > 2 || has("gui_running")
   set guioptions-=T
-  if filereadable(expand("~/.vimrc.colorscheme"))
-    source ~/.vimrc.colorscheme
-  endif
+  set background=dark
+  let g:solarized_termtrans=1
+  colorscheme solarized
   syntax enable
   set hlsearch
   set guifont=Inconsolata-dz\ for\ Powerline:h14
@@ -125,14 +125,14 @@ let g:Powerline_symbols="fancy"
 cnoremap %% <C-R>=expand("%:h")."/"<CR>
 cnoremap w!! w !sudo tee % > /dev/null
 
-map <Down> :echo "NO!"<CR>
-map <Esc>[A <Up>
-map <Esc>[B <Down>
-map <Esc>[C <Right>
-map <Esc>[D <Left>
-map <Left> :echo "NO!"<CR>
-map <Right> :echo "NO!"<CR>
-map <Up> :echo "NO!"<CR>
+" map <Down> :echo "NO!"<CR>
+" map <Esc>[A <Up>
+" map <Esc>[B <Down>
+" map <Esc>[C <Right>
+" map <Esc>[D <Left>
+" map <Left> :echo "NO!"<CR>
+" map <Right> :echo "NO!"<CR>
+" map <Up> :echo "NO!"<CR>
 
 imap jj <ESC>
 nmap <leader>ee :e %%
@@ -158,6 +158,16 @@ nnoremap <leader>i :IndentGuidesToggle<CR>
 nnoremap <leader>l :set list!<CR>
 nnoremap <leader>s :set spell!<CR>
 nnoremap <leader>v :edit $MYVIMRC<CR>
+nnoremap <C-Left> <C-w>h
+nnoremap <C-Down> <C-w>j
+nnoremap <C-Up> <C-w>k
+nnoremap <C-Right> <C-w>l
+
+map <leader>f :TagbarToggle<CR>
+set tags+=gems.tags
+
+map <leader>w :w \|:CoffeeCompile <cr><esc><C-w><C-h>
+map <leader>pp :r!pbpaste<CR>
 
 if filereadable(expand(".vimrc.local"))
   source .vimrc.local
