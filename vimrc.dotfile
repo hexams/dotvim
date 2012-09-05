@@ -25,7 +25,7 @@ set nolist
 set listchars=tab:▸\ ,eol:¬,trail:·,precedes:«,extends:»
 set nopaste
 set textwidth=80
-set wrap
+set nowrap
 set linebreak
 set showbreak=…
 set sidescroll=5
@@ -45,9 +45,13 @@ set ruler
 set number
 set mousehide
 set mouse=a
+set ttymouse=xterm2
 set autoread
 set wildmenu
 set wildmode=list:longest
+set wildignore+=*.o,*.out,*.obj,*.pyc,*.rbc,*.rbo,*.gem,*.class
+set wildignore+=.git,.svn,.hg
+set wildignore+=*.zip,*.rar,*.tar.xz,*.tar.bz2,*.tar.gz
 set shortmess=atI
 set timeoutlen=500
 set visualbell
@@ -55,20 +59,24 @@ set hidden
 set title
 set nospell
 set spelllang=en_us,pt_br
-set history=1000
+set history=100
 set backup
-set backupdir=~/.vim/backup,~/tmp,/var/tmp,/tmp
-set directory=~/.vim/backup,~/tmp,/var/tmp,/tmp
+set backupdir=~/.vim/backup,/tmp,/var/tmp
+set directory=~/.vim/swap,/tmp,/var/tmp
 set completeopt=menu,menuone,longest
 set pumheight=15
-set wildignore+=*/.hg/*,*/.svn/*
-set wildignore+=*.o,moc_*.cpp,*.exe,*.qm
-set wildignore+=.gitkeep,.DS_Store
 set colorcolumn=+1
 set winwidth=85
 set winheight=5
 set winminheight=5
 set winheight=999
+set laststatus=2
+set statusline=%f\ %m\ %r
+set statusline+=\ Line:%l/%L[%p%%]
+set statusline+=\ Col:%v
+set statusline+=\ Buf:#%n
+set statusline+=\ [%b][0x%B]
+set statusline+=\ %{fugitive#statusline()}
 
 " colors
 if &t_Co > 2 || has("gui_running")
@@ -79,10 +87,22 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+" functions
+function! s:setupWrapping()
+  set wrap
+  set linebreak
+  set textwidth=72
+  set nolist
+endfunction
+
 " auto commands
 if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC
   autocmd CursorHold * checktime
+  autocmd FileType {make,python,c,cpp} set noexpandtab
+  autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set filetype=ruby
+  autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} set filetype=ruby | call s:setupWrapping()
+  autocmd BufRead,BufNewFile *.json set filetype=javascript
   autocmd BufReadPost *
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
         \   exe "normal g`\"" |
@@ -101,9 +121,6 @@ let g:ctrlp_custom_ignore='\.git$\|build$\|vendor\|node_modules$'
 let g:ctrlp_root_markers=['Gemfile', 'Rakefile']
 let g:ctrlp_max_height=20
 let g:slime_target = "tmux"
-
-" custom commands
-command! -nargs=* Wrap set wrap linebreak nolist
 
 " bindings
 cnoremap %% <C-R>=expand("%:h")."/"<CR>
