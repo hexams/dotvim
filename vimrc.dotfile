@@ -101,7 +101,7 @@ if has("autocmd")
   autocmd CursorHold * checktime
   autocmd FileType {make,python,c,cpp} set noexpandtab
   autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set filetype=ruby
-  autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} set filetype=ruby | call s:setupWrapping()
+  autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} set filetype=markdown | call s:setupWrapping()
   autocmd BufRead,BufNewFile *.json set filetype=javascript
   autocmd BufReadPost *
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -158,6 +158,6 @@ nnoremap <leader>l :set list!<CR>
 nnoremap <leader>s :set spell!<CR>
 nnoremap <leader>v :edit $MYVIMRC<CR>
 
-if filereadable(expand("./.vimrc"))
-  source ./.vimrc
+if filereadable(expand(".vimrc.local"))
+  source .vimrc.local
 endif
