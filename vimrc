@@ -71,12 +71,6 @@ set winheight=5
 set winminheight=5
 set winheight=999
 set laststatus=2
-set statusline=%f\ %m\ %r
-set statusline+=\ Line:%l/%L[%p%%]
-set statusline+=\ Col:%v
-set statusline+=\ Buf:#%n
-set statusline+=\ [%b][0x%B]
-set statusline+=\ %{fugitive#statusline()}
 
 " colors
 if &t_Co > 2 || has("gui_running")
@@ -85,6 +79,7 @@ if &t_Co > 2 || has("gui_running")
   colorscheme solarized
   syntax enable
   set hlsearch
+  set guifont=Inconsolata-dz\ for\ Powerline:h14
 endif
 
 " functions
@@ -97,8 +92,8 @@ endfunction
 
 " auto commands
 if has("autocmd")
-  autocmd BufWritePost .vimrc source $MYVIMRC
-  autocmd CursorHold * checktime
+  " autocmd BufWritePost .vimrc source $MYVIMRC
+  " autocmd CursorHold * checktime
   autocmd FileType {make,python,c,cpp} set noexpandtab
   autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set filetype=ruby
   autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} set filetype=markdown | call s:setupWrapping()
@@ -116,13 +111,14 @@ let g:indent_guides_color_change_percent=3
 let g:indent_guides_guide_size=0
 let g:clang_complete_auto=0
 let g:clang_complete_copen=1
-let g:clang_use_library = 1
+let g:clang_use_library=1
 let g:syntastic_cpp_config_file=".clang_complete"
 let g:syntastic_cpp_compiler="clang"
 let g:ctrlp_custom_ignore='\.git$\|build$\|vendor\|node_modules$'
 let g:ctrlp_root_markers=['Gemfile', 'Rakefile']
 let g:ctrlp_max_height=20
-let g:slime_target = "tmux"
+let g:slime_target="tmux"
+let g:Powerline_symbols="fancy"
 
 " bindings
 cnoremap %% <C-R>=expand("%:h")."/"<CR>

@@ -1,4 +1,3 @@
-set guifont=Inconsolata-dz:h14
 set antialias
 set lines=40
 set columns=84

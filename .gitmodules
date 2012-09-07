@@ -172,3 +172,6 @@
 [submodule "modules/css-color"]
 	path = modules/css-color
 	url = https://github.com/ap/vim-css-color.git
+[submodule "modules/powerline"]
+	path = modules/powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
