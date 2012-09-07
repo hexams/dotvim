@@ -3,10 +3,9 @@
 set -e
 
 # creates symlinks inside the home directory
-for file in *.dotfile; do
-  dotfile=`echo $file | sed 's/.dotfile//'`
-  dotfile=$HOME/.$dotfile
-  ln -fs .dotvim/$file $dotfile
+dir=`echo $(pwd) | sed "s|$HOME/||"`
+cd $HOME
+ln -fs $dir .vim
+for file in vimrc gvimrc; do
+  ln -fs .vim/$file .$file
 done
-cd
-ln -fs .dotvim .vim
