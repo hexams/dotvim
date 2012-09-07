@@ -145,3 +145,30 @@
 [submodule "modules/syntastic"]
 	path = modules/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "modules/commentary"]
+	path = modules/commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "modules/supertab"]
+	path = modules/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "modules/smartinput"]
+	path = modules/smartinput
+	url = https://github.com/kana/vim-smartinput.git
+[submodule "modules/snipmate-snippets"]
+	path = modules/snipmate-snippets
+	url = https://github.com/honza/snipmate-snippets.git
+[submodule "modules/numbers"]
+	path = modules/numbers
+	url = https://github.com/myusuf3/numbers.vim.git
+[submodule "modules/textile"]
+	path = modules/textile
+	url = https://github.com/timcharper/textile.vim.git
+[submodule "modules/rspec"]
+	path = modules/rspec
+	url = https://github.com/skwp/vim-rspec.git
+[submodule "modules/gundo"]
+	path = modules/gundo
+	url = https://github.com/sjl/gundo.vim.git
+[submodule "modules/css-color"]
+	path = modules/css-color
+	url = https://github.com/ap/vim-css-color.git
