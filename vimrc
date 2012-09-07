@@ -141,6 +141,10 @@ nmap <leader>ev :vsp %%
 nmap \\\ gcc
 vmap \\ gc
 
+noremap <leader>y "*y
+noremap <leader>yy "*Y
+noremap <leader>p :set paste<CR>:put *<CR>:set nopaste<CR>
+
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
