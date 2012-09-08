@@ -75,8 +75,9 @@ set laststatus=2
 " colors
 if &t_Co > 2 || has("gui_running")
   set guioptions-=T
-  set background=dark
-  colorscheme solarized
+  if filereadable(expand("~/.vimrc.colorscheme"))
+    source ~/.vimrc.colorscheme
+  endif
   syntax enable
   set hlsearch
   set guifont=Inconsolata-dz\ for\ Powerline:h14

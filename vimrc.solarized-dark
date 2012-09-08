@@ -1,0 +1,4 @@
+" set ft=vim
+
+set background=dark
+colorscheme solarized
