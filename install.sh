@@ -3,10 +3,15 @@
 set -e
 
 # creates symlinks inside the home directory
-for file in *.dotfile; do
-  dotfile=`echo $file | sed 's/.dotfile//'`
-  dotfile=$HOME/.$dotfile
-  ln -fs .dotvim/$file $dotfile
-done
-cd
-ln -fs .dotvim .vim
+dir=`echo $(pwd) | sed "s|$HOME/||"`
+(
+  cd $HOME
+  ln -fs $dir .vim
+  for file in $dir/dotfiles/*; do
+    realfile=`greadlink -f $file | sed "s|$HOME/||"`
+    linkname=".`basename $file`"
+    ln -fs $realfile $linkname
+  done
+)
+
+sh toggle_colorscheme.sh
