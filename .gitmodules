@@ -112,9 +112,6 @@
 [submodule "modules/indent-guides"]
 	path = modules/indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "modules/conque"]
-	path = modules/conque
-	url = https://github.com/rson/vim-conque.git
 [submodule "modules/ruby-conque"]
 	path = modules/ruby-conque
 	url = https://github.com/skwp/vim-ruby-conque.git
@@ -127,18 +124,12 @@
 [submodule "modules/clang_complete"]
 	path = modules/clang_complete
 	url = https://github.com/Rip-Rip/clang_complete.git
-[submodule "modules/zeh-snippets"]
-	path = modules/zeh-snippets
-	url = https://github.com/zehrizzatti/snipmate-snippets.git
 [submodule "modules/tcomment"]
 	path = modules/tcomment
 	url = https://github.com/tomtom/tcomment_vim.git
 [submodule "modules/gist"]
 	path = modules/gist
 	url = https://github.com/mattn/gist-vim.git
-[submodule "modules/matchit"]
-	path = modules/matchit
-	url = https://github.com/edsono/vim-matchit.git
 [submodule "modules/syntastic"]
 	path = modules/syntastic
 	url = https://github.com/scrooloose/syntastic.git
@@ -151,9 +142,6 @@
 [submodule "modules/smartinput"]
 	path = modules/smartinput
 	url = https://github.com/kana/vim-smartinput.git
-[submodule "modules/snipmate-snippets"]
-	path = modules/snipmate-snippets
-	url = https://github.com/honza/snipmate-snippets.git
 [submodule "modules/numbers"]
 	path = modules/numbers
 	url = https://github.com/myusuf3/numbers.vim.git
