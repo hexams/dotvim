@@ -3,97 +3,111 @@ set nocompatible
 set encoding=utf-8
 set fileencoding=utf-8
 
-" remap leader ASAP
+"remap leader ASAP
 let mapleader=","
 
 " run pathogen for plugins insjection
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
-" settings
+" Settings
 filetype on
 filetype plugin on
 filetype indent on
 
+" Indent options
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 set smarttab
-set backspace=indent,eol,start
-set nolist
-"set listchars=tab:▸\ ,eol:¬,trail:·,precedes:«,extends:»
-set nopaste
-" set textwidth=80
-" set nowrap
-set linebreak
-" set showbreak=…
-set sidescroll=5
-set scrolloff=5
-set formatprg=par\ -TbgqRw80
-set cindent
 set autoindent
+set cindent
 set smartindent
+
+" Search options
 set ignorecase
 set smartcase
 set incsearch
-set showmatch
-set matchtime=2
-set showmode
-set showcmd
+
+" Text rendering options
+set linebreak
+"set scrolloff=5
+"set sidescroll=5
+"set nowrap
+
+" User interface options
+set laststatus=2
 set ruler
+set wildmenu
+set wildmode=list:longest
 set number
 set mousehide
 set mouse=a
 set ttymouse=xterm2
+set title
+"set visualbell
+set nolist
+"set showbreak=…
+"set formatprg=par\ -TbgqRw80
+set showmatch
+set matchtime=2
+set showmode
+set showcmd
+"set cursorline
+"set cursorcolumn
+set colorcolumn=80
+"set textwidth=80
+"set listchars=tab:▸\ ,eol:¬,trail:·,precedes:«,extends:»
+
+" Miscellaneous
 set autoread
-set wildmenu
-set wildmode=list:longest
+set backspace=indent,eol,start
+set nobackup
+"set backupdir=~/.vim/backup,/tmp,/var/tmp
+"set directory=~/.vim/swap,/tmp,/var/tmp
+set hidden
+set history=100
+set nospell
+set spelllang=en_us,pt_br
 set wildignore+=*.o,*.out,*.obj,*.pyc,*.rbc,*.rbo,*.gem,*.class
 set wildignore+=.git,.svn,.hg
 set wildignore+=*.zip,*.rar,*.tar.xz,*.tar.bz2,*.tar.gz
+set nopaste
+
 set shortmess=atI
 set timeoutlen=500
-"set visualbell
-set hidden
-set title
-set nospell
-set spelllang=en_us,pt_br
-set history=100
-set backup
-set backupdir=~/.vim/backup,/tmp,/var/tmp
-set directory=~/.vim/swap,/tmp,/var/tmp
 set completeopt=menu,menuone,longest
 set pumheight=15
-set colorcolumn=80
 set winwidth=85
-set winheight=5
+set winheight=50
 set winminheight=5
 set winheight=999
-set laststatus=2
 
-" colors
+" Colors
 if &t_Co > 2 || has("gui_running")
-  set guioptions-=T
+  "set guioptions-=T
   set background=dark
-  let g:solarized_termtrans=1
-  let g:solarized_termcolors=256
   colorscheme solarized
-  syntax enable
+
+  "let g:solarized_termtrans=1
+  "let g:solarized_termcolors=256
+  set guifont=Inconsolata-dz\ dz\ 14
+
   set hlsearch
-  set guifont=Inconsolata-dz\ for\ Powerline:h14
+  syntax enable
 endif
 
-" functions
+" Functions
 function! s:setupWrapping()
   set wrap
   set linebreak
   set colorcolumn=72
-  " set textwidth=72
+  "set textwidth=72
   set nolist
 endfunction
 
-" auto commands
+" Auto commands
 if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC
   autocmd CursorHold * checktime
@@ -101,7 +115,7 @@ if has("autocmd")
   autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set filetype=ruby
   autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} set filetype=markdown | call s:setupWrapping()
   autocmd BufRead,BufNewFile *.json set filetype=javascript
-   autocmd BufRead,BufNewFile *.vue,*.wpy set filetype=vue
+  autocmd BufRead,BufNewFile *.vue,*.wpy set filetype=vue
   autocmd BufReadPost *
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
         \   exe "normal g`\"" |
@@ -126,8 +140,32 @@ endif
 "
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'powerlineish'
-let g:airline_left_sep = '⮀'
-"let g:airline_left_sep = '▶'
+"let g:airline_left_sep = '⮀'
+"let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+"let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+"let g:airline_symbols.colnr = '  ㏇:'
+let g:airline_symbols.colnr = '  ℅:'
+"let g:airline_symbols.crypt = '🔒'
+"let g:airline_symbols.linenr = '☰'
+"let g:airline_symbols.linenr = ' ␊:'
+"let g:airline_symbols.linenr = ' ␤:'
+"let g:airline_symbols.linenr = '¶'
+"let g:airline_symbols.maxlinenr = ''
+"let g:airline_symbols.maxlinenr = '㏑'
+"let g:airline_symbols.branch = '⎇'
+"let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.paste = 'Þ'
+"let g:airline_symbols.paste = '∥'
+"let g:airline_symbols.spell = 'Ꞩ'
+"let g:airline_symbols.notexists = 'Ɇ'
+"let g:airline_symbols.whitespace = 'Ξ'
 
 "" bindings
 "cnoremap %% <C-R>=expand("%:h")."/"<CR>
