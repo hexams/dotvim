@@ -122,65 +122,24 @@ if has("autocmd")
         \ endif
 endif
 
-"" plugins configuration
-"let g:indent_guides_auto_colors=1
-"let g:indent_guides_enable_on_vim_startup=0
-"let g:indent_guides_color_change_percent=3
-"let g:indent_guides_guide_size=0
-"let g:clang_complete_auto=0
-"let g:clang_complete_copen=1
-"let g:clang_use_library=1
-"let g:syntastic_cpp_config_file=".clang_complete"
-"let g:syntastic_cpp_compiler="clang"
-"let g:ctrlp_custom_ignore='\.git$\|build$\|vendor\|node_modules$'
-"let g:ctrlp_root_markers=['Gemfile', 'Rakefile']
-"let g:ctrlp_max_height=20
-"let g:slime_target="tmux"
-"let g:Powerline_symbols="fancy"
-"
+" Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'powerlineish'
-"let g:airline_left_sep = '⮀'
-"let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
-"let g:airline_right_sep = '«'
 let g:airline_right_sep = '◀'
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
-"let g:airline_symbols.colnr = '  ㏇:'
-let g:airline_symbols.colnr = '  ℅:'
-"let g:airline_symbols.crypt = '🔒'
-"let g:airline_symbols.linenr = '☰'
-"let g:airline_symbols.linenr = ' ␊:'
-"let g:airline_symbols.linenr = ' ␤:'
-"let g:airline_symbols.linenr = '¶'
-"let g:airline_symbols.maxlinenr = ''
-"let g:airline_symbols.maxlinenr = '㏑'
-"let g:airline_symbols.branch = '⎇'
-"let g:airline_symbols.paste = 'ρ'
-"let g:airline_symbols.paste = 'Þ'
-"let g:airline_symbols.paste = '∥'
-"let g:airline_symbols.spell = 'Ꞩ'
-"let g:airline_symbols.notexists = 'Ɇ'
-"let g:airline_symbols.whitespace = 'Ξ'
-
-" Indent Guide
-"let g:indent_guides_start_level = 2
-"let g:indent_guides_enable_on_vim_startup = 1
-"let g:indent_guides_guide_size = 1
-"hi IndentGuidesEven ctermbg=10
-"hi IndentGuidesOdd ctermbg=0
+let g:airline_symbols.colnr = ' ℅:'
+let g:airline_symbols.linenr = ' ␤:'
+let g:airline_symbols.maxlinenr = ''
 
 " IndentLine
 let g:indentLine_color_term = 10
 
 " Syntastic
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -238,6 +197,6 @@ nnoremap <leader>v :edit $MYVIMRC<CR>
 "map <leader>pp :r!pbpaste<CR>
 map <leader>c :set number!<CR>
 "
-"if filereadable(expand(".vimrc.local"))
-"  source .vimrc.local
-"endif
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
