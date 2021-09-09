@@ -167,6 +167,25 @@ let g:airline_symbols.colnr = '  ℅:'
 "let g:airline_symbols.notexists = 'Ɇ'
 "let g:airline_symbols.whitespace = 'Ξ'
 
+" Indent Guide
+"let g:indent_guides_start_level = 2
+"let g:indent_guides_enable_on_vim_startup = 1
+"let g:indent_guides_guide_size = 1
+"hi IndentGuidesEven ctermbg=10
+"hi IndentGuidesOdd ctermbg=0
+
+" IndentLine
+let g:indentLine_color_term = 10
+
+" Syntastic
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 "" bindings
 "cnoremap %% <C-R>=expand("%:h")."/"<CR>
 "cnoremap w!! w !sudo tee % > /dev/null
