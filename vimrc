@@ -138,6 +138,7 @@ let g:airline_symbols.maxlinenr = ''
 
 " IndentLine
 let g:indentLine_color_term = 10
+let g:indentLine_enabled = 0
 
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
