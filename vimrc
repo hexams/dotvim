@@ -102,7 +102,7 @@ if &t_Co > 2 || has("gui_running")
   hi! link rubyBlockParameterList Identifier
   hi! link rubyPercentSymbolDelimiter Normal
   hi! link rubyCallback Normal
-  hi! link rubyControl Identifier
+  hi! link rubyControl Statement
 endif
 
 " Functions
