@@ -90,12 +90,19 @@ if &t_Co > 2 || has("gui_running")
   set background=dark
   colorscheme solarized
 
-  "let g:solarized_termtrans=1
-  "let g:solarized_termcolors=256
+  let g:solarized_termtrans=1
+  let g:solarized_termcolors=256
   set guifont=Inconsolata-dz\ dz\ 14
 
   set hlsearch
   syntax enable
+
+  hi! link rubyClass Keyword
+  hi! link rubyDefine Keyword
+  hi! link rubyBlockParameterList Identifier
+  hi! link rubyPercentSymbolDelimiter Normal
+  hi! link rubyCallback Normal
+  hi! link rubyControl Identifier
 endif
 
 " Functions
